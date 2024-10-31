@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+</head>
+<body>
+
+    <h2>Student Sign-Up Form</h2>
+    <form action="/submit-form" method="POST">
+        <!-- ID Field -->
+        <label for="student-id">ID:</label>
+        <input type="text" id="student-id" name="student-id" required>
+        <br><br>
+
+        <!-- Names Field -->
+        <label for="names">Names:</label>
+        <input type="text" id="names" name="names" required>
+        <br><br>
+
+        <!-- Age Field -->
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="1" required>
+        <br><br>
+
+        <!-- Grade Field -->
+        <label for="grade">Grade:</label>
+        <input type="text" id="grade" name="grade" required>
+        <br><br>
+
+        <!-- Newsletter Signup Checkbox -->
+        <label for="newsletter">Sign up for Newsletter:</label>
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
