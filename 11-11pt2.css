@@ -1,0 +1,39 @@
+/* Body styling */
+body {
+    background-color: lightgray;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading styling */
+h1 {
+    color: blue;
+}
+
+/* Paragraph styling */
+p {
+    padding: 10px;
+    margin: 20px 0;
+}
+
+/* Link styling */
+a {
+    color: darkblue;
+    text-decoration: none;
+}
+
+/* Image and caption styling */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-container figcaption {
+    font-style: italic;
+    color: darkslategray;
+    margin-top: 5px;
+}
