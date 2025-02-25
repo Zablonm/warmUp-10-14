@@ -1,0 +1,31 @@
+# Zablon Mulugeta
+
+def conditional_sum(numbers):
+   
+    if len(numbers) % 2 == 0:
+        return sum(numbers)
+    return 0
+
+class CustomList:
+   
+    def __init__(self, elements=None):
+        if elements is None:
+            self.elements = []
+        else:
+            self.elements = elements
+
+    def add_element(self, element):
+        self.elements.append(element)
+        if len(self.elements) % 2 != 0:  
+            self.elements.append(element)  
+
+    def get_list(self):
+        return self.elements
+
+
+numbers = [1, 2, 3, 4]
+print(conditional_sum(numbers)) 
+
+custom_list = CustomList([1, 2, 3])
+custom_list.add_element(4)
+print(custom_list.get_list()) 
