@@ -1,0 +1,74 @@
+class Student:
+    def __init__(self, name):
+        self.__name = name
+
+    def get_name(self):
+        return self.__name
+
+
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    @abstractmethod
+    def speak(self):
+        pass
+
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+class Dog(Animal):
+    def bark(self):
+        return f'{self.name} says Woof!'
+
+
+class Cat:
+    def speak(self):
+        return 'Meow'
+
+class Dog:
+    def speak(self):
+        return 'Woof'
+
+for animal in [Cat(), Dog()]:
+    print(animal.speak())
+
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+p = Person('Alice')
+
+
+class Car:
+    wheels = 4
+
+    def __init__(self, brand):
+        self.brand = brand
+
+
+class Math:
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+    @classmethod
+    def identity(cls):
+        return cls.__name__
+
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return '...'
+
+class Dog(Animal):
+    def speak(self):
+        return f'{self.name} says Woof!'
+
+d = Dog('Buddy')
+print(d.speak())
