@@ -1,0 +1,65 @@
+# 1
+class Book:
+    def __init__(self, title, author, pages):
+        self.title = title
+        self.author = author
+        self.pages = pages
+
+    def get_description(self):
+        return f"'{self.title}' by {self.author}, {self.pages} pages"
+
+# 2
+class EBook(Book):
+    def __init__(self, title, author, pages, file_size):
+        super().__init__(title, author, pages)
+        self.file_size = file_size
+
+    def get_description(self):
+        return f"'{self.title}' by {self.author}, {self.pages} pages, File size: {self.file_size}MB"
+
+# 3
+book1 = Book("1984", "George Orwell", 328)
+ebook1 = EBook("Digital Fortress", "Dan Brown", 384, 2)
+
+print(book1.get_description())
+print(ebook1.get_description())
+
+# 4
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+    # 5
+    @classmethod
+    def unit_square(cls):
+        return cls(1, 1)
+
+    # 6
+    @staticmethod
+    def is_square(w, h):
+        return w == h
+
+# 7
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    @abstractmethod
+    def move(self):
+        pass
+
+class Car(Vehicle):
+    def move(self):
+        return "Car is driving on the road"
+
+class Bike(Vehicle):
+    def move(self):
+        return "Bike is cycling on the path"
+
+# 8
+vehicles = [Car(), Bike(), Car()]
+for v in vehicles:
+    print(v.move())
