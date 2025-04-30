@@ -1,0 +1,12 @@
+from person import Person
+
+class Student(Person):
+  def __init__(self, name, birthyear, student_id, GPA, counselor, grade):
+    super().__init__(name, birthyear)
+    self.__student_id = student_id
+    self.__GPA = GPA
+    self.__counselor = counselor
+    self.__grade = grade
+  student = student("My Name", 1945, 1, 2.0, "Ms. Palmer", "Junior")
+
+  print(student.get_name())
